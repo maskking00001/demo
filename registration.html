@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radgistrastion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-image: url(/img/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container::-webkit-scrollbar {
+            width: 0px;
+            display: none;
+        }
+        
+        .container {
+            overflow: scroll;
+            height: 555px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid cyan;
+            border-radius: 20px;
+            width: 450px;
+            backdrop-filter: blur(40px);
+            box-shadow: 10px 10px 40px;
+        }
+        
+        h1 {
+            font-size: 50px;
+            margin-bottom: 40px;
+            margin-top: 25px;
+        }
+        
+        h1:hover {
+            color: black;
+            filter: drop-shadow(5px 5px 10px cyan);
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        
+        #i {
+            border-radius: 10px;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.467);
+            height: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        #i:hover {
+            border-radius: 5px;
+            filter: drop-shadow(3px 3px 6px rgba(0, 255, 255, 0.248));
+            box-shadow: 5px 5px 10px rgba(128, 0, 128, 0.597);
+        }
+        
+        label {
+            display: block;
+            font-size: 25px;
+        }
+        
+        label:hover {
+            letter-spacing: 1px;
+            filter: drop-shadow(5px 5px 5px pink);
+            transition: 0.4s;
+        }
+        
+        .gender {
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+            justify-content: space-between;
+        }
+        
+        .gender>label:hover {
+            letter-spacing: 0px;
+        }
+        
+        .button {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 20px;
+            /* margin-bottom:30px; */
+        }
+        
+        button {
+            padding: 8px;
+            border-radius: 10px;
+            font-size: 15px;
+            color: aqua;
+            width: 80px;
+            background-color: rgba(137, 43, 226, 0.416);
+            backdrop-filter: blur(1px);
+            margin-bottom: 20px;
+        }
+        
+        button:hover {
+            background-color: black;
+            box-shadow: 5px 5px 50px cyan;
+            border-radius: 20px;
+            transition: 0.6s;
+        }
+        
+        a {
+            text-decoration: none;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Registration</h1>
+            <form action="" method="post">
+                <label for class="username">Enter Username</label>
+                <input type="text" id="i" name="username" placeholder="Username" required>
+                <label for class="password">Enter Password</label>
+                <input type="password" placeholder="Password" id="i">
+                <label for class="email">Email</label>
+                <input type="email" placeholder="Email" required id="i">
+                <label for class="num">Mo. Number</label>
+                <input type="number" placeholder="MO. number" id="i" required>
+                <label for class="hobbies"> Enter Hobbies</label>
+                <textarea name="hobbies" id="i" placeholder="hobbies..."></textarea>
+                <div class="gender">
+                    <label for class="Gender">Gender :</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <textarea name="add" placeholder="address" rows="3" id="i"></textarea>
+
+                <div class="button">
+                    <button type="submit" class="submit"><a href="/ty.html">submit</a></button>
+                    <button type="reset" class="reset">reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
